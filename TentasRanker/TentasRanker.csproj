@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ranker.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\bg.png" />
+    <None Remove="Images\vs.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ranker.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\bg.png" />
+    <Resource Include="Images\vs.png" />
+  </ItemGroup>
+
+</Project>

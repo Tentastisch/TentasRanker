@@ -1,0 +1,88 @@
+﻿<Page x:Class="TentasRanker.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TentasRanker.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Main">
+
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="filebutton"  Content="Open File" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White" MinWidth="110" MaxWidth="380" Margin="20,30,20,0" Click="file_Click" Height="32" VerticalAlignment="Top" FontFamily="Lato" FontSize="16">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#040305"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#1d1d1d"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Label x:Name="label" Content="Rounds (2-100)" Margin="20,89,20,0" VerticalAlignment="Top" Foreground="White" FontFamily="Lato" FontSize="16" Height="30"/>
+        <TextBox x:Name="textBox" Foreground="White" Background="#040305" Padding="5 5 5 5" BorderThickness="0" Margin="20,119,20,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" MinWidth="110" MaxWidth="380" FontFamily="Lato" FontSize="18">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+
+        <Button x:Name="start" Content="Start" MinWidth="110" MaxWidth="380" Cursor="Hand" BorderBrush="#FF140F19" Foreground="White" Margin="20,180,20,0" Click="start_Click" Height="32" VerticalAlignment="Top" FontFamily="Lato" FontSize="16">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FF8A62B3"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#6d4e8c"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <ListBox x:Name="listBox" Grid.Column="1" HorizontalContentAlignment="Stretch" Margin="10,30,30,30" Padding="5, 5, 5, 5" Background="#BF040305" Foreground="White" FontSize="18" FontFamily="Lato" BorderBrush="#FF140F19">
+            <ListBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <TextBlock x:Name="errorblock" Margin="20,243,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="138" FontSize="16" FontFamily="Lato" Foreground="#FFC73131" TextAlignment="Center"/>
+    </Grid>
+</Page>
