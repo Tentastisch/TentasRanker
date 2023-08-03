@@ -38,8 +38,13 @@ namespace TentasRanker.Pages
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text file (*.txt)|*.txt";
+            saveFileDialog.FileName = "list.txt";
             if (saveFileDialog.ShowDialog() == true)
             {
+                for (int i = 0; i < Sorter.list.Count; i++)
+                {
+                    Sorter.list[i] = $"{i + 1}. {Sorter.list[i]}";
+                }
                 File.WriteAllLines(saveFileDialog.FileName, Sorter.list);
                 Application.Current.Shutdown();
             }
