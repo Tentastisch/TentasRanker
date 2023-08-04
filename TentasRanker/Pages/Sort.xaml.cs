@@ -67,7 +67,7 @@ namespace TentasRanker.Pages
         /// <param name="e"></param>
         private void left_Click(object sender, RoutedEventArgs e)
         {
-            Sorter.FinishRound(true);
+            Sorter.FinishRound(false);
         }
 
         /// <summary>
@@ -77,7 +77,17 @@ namespace TentasRanker.Pages
         /// <param name="e"></param>
         private void right_Click(object sender, RoutedEventArgs e)
         {
-            Sorter.FinishRound(false);
+            Sorter.FinishRound(true);
+        }
+
+        /// <summary>
+        /// Stops the current sorting
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void stop_Click(object sender, RoutedEventArgs e)
+        {
+            Sorter.Finish();
         }
     }
 }

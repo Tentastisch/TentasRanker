@@ -21,7 +21,7 @@
             </Button.Resources>
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="#040305"/>
+                    <Setter Property="Background" Value="#FF181719"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type Button}">
@@ -40,17 +40,8 @@
             </Button.Style>
         </Button>
 
-        <Label x:Name="label" Content="Rounds (2-100)" Margin="20,89,20,0" VerticalAlignment="Top" Foreground="White" FontFamily="Lato" FontSize="16" Height="30"/>
-        <TextBox x:Name="textBox" Foreground="White" Background="#040305" Padding="5 5 5 5" BorderThickness="0" Margin="20,119,20,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" MinWidth="110" MaxWidth="380" FontFamily="Lato" FontSize="18">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
 
-
-        <Button x:Name="start" Content="Start" MinWidth="110" MaxWidth="380" Cursor="Hand" BorderBrush="#FF140F19" Foreground="White" Margin="20,180,20,0" Click="start_Click" Height="32" VerticalAlignment="Top" FontFamily="Lato" FontSize="16">
+        <Button x:Name="start" Content="Start" MinWidth="110" MaxWidth="380" Cursor="Hand" BorderBrush="#FF140F19" Foreground="White" Margin="20,81,20,0" Click="start_Click" Height="32" VerticalAlignment="Top" FontFamily="Lato" FontSize="16">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

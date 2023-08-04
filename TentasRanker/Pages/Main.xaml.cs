@@ -65,21 +65,9 @@ namespace TentasRanker.Pages
                 return;
             }
 
-            int ignore = 0;
-            if (int.TryParse(textBox.Text, out ignore))
-            {
-                var rounded = int.Parse(textBox.Text);
-                if (rounded < 2)
-                    textBox.Text = "2";
-                else if (rounded > 100)
-                    textBox.Text = "100";
-            }
-            else
-                textBox.Text = "2";
-
-            Sorter.ChangeRounds(textBox.Text);  //Change rounds in sorter to selected rounds
-            MainWindow.StartSorting();          //Change page to sort page
-            Sorter.StartSort();                 //Start the sorting process
+            //Sorter.ChangeRounds(textBox.Text);    //Change rounds in sorter to selected rounds
+            MainWindow.StartSorting();              //Change page to sort page
+            Sorter.Start();                         //Start the sorting process
         }
     }
 }

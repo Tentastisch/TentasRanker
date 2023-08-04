@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>ranker.ico</ApplicationIcon>
+    <Authors>Tentastisch</Authors>
   </PropertyGroup>
 
   <ItemGroup>

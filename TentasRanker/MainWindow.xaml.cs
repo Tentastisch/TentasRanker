@@ -39,5 +39,10 @@ namespace TentasRanker
         {
             frames.Content = new Finish();
         }
+
+        public static void Reset()
+        {
+            frames.Content = new Main();
+        }
     }
 }
